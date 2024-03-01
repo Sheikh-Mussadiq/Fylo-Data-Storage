@@ -1,0 +1,120 @@
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--Very-Dark-Blue);
+    font-family: "Raleway", sans-serif;
+}
+main {
+display: flex;
+flex-direction: row;
+border: 1px solid black;
+}
+.left-div {
+    background-color: var(--Dark-Blue);
+    padding: 2rem;
+    width: 350px;
+    border-radius: 10px;
+    border-top-right-radius: 6rem;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.icons div {
+    margin-right: 15px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+.right-div {
+    background-color: var(--Dark-Blue);
+    width: 400px;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.top-text {
+    color: var(--Pale-Blue);
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+strong {
+    color: var(--Pale-Blue);
+    font-weight: 700;
+}
+.bottom-text {
+    color: var(--Pale-Blue);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.chat{
+    color: hsl(229, 57%, 11%);
+    font-weight: 700;
+    font-size: 32px;
+    padding: 15px 8px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    position: absolute;
+    top: 21rem;
+    right: 16rem;
+    z-index: 1;
+}
+
+.chat:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top:60%;
+    border-top:solid 50px #fff;
+    border-left:solid 50px transparent;
+    border-right: solid 0px transparent;
+    border-bottom: solid 10px transparent;
+    left: 8rem;
+    z-index: -1;
+}
+#progressbar {
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 13px;
+    /* (height of inner div) / 2 + padding */
+    padding: 3px;
+}
+  
+#progressbar>div {
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    width: 80%;
+    /* Adjust with JavaScript */
+    height: 10px;
+    border-radius: 10px;
+  }
+.attribution { 
+    font-size: 11px;
+    text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
