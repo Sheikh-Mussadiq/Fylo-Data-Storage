@@ -30,7 +30,7 @@ flex-direction: row;
 }
 .left-div {
     background-color: var(--Dark-Blue);
-    padding: 2rem;
+    padding: 3rem;
     width: 350px;
     border-radius: 10px;
     border-top-right-radius: 6rem;
@@ -38,7 +38,7 @@ flex-direction: row;
 .icons {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .icons div {
     margin-right: 15px;
@@ -71,32 +71,11 @@ strong {
     margin-top: 10px;
     font-weight: 700;
 }
-.chat{
-    color: hsl(229, 57%, 11%);
-    font-weight: 700;
-    font-size: 32px;
-    padding: 15px 8px;
-    background-color: #fff;
-    border-radius: 10px 10px 0 10px;
-    position: absolute;
-    top: 21rem;
-    right: 16rem;
-    z-index: 1;
-}
-
-.chat:after{
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top:60%;
-    border-top:solid 50px #fff;
-    border-left:solid 50px transparent;
-    border-right: solid 0px transparent;
-    border-bottom: solid 10px transparent;
-    left: 8rem;
-    z-index: -1;
+.chat {
+    color: var(--Pale-Blue);
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 400;
 }
 #progressbar {
     background-color: var(--Very-Dark-Blue);
@@ -117,13 +96,48 @@ strong {
     text-align: center;
     margin-top: 3rem;
     color: var(--Pale-Blue);
-    font-size: 14px;
+    font-weight: 400;
+    
 }
 .attribution a { 
     text-decoration: none;
     color: var(--Pale-Blue);
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: 400;
 }
 .attribution a:hover {
     color: var(--Grayish-Blue);
+}
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main {
+        margin: 2rem;
+        flex-direction: column;
+    }
+    .right-div {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .left-div {
+        width: 400px;
+    }
+    
+}
+@media (max-width: 410px) {
+    main {
+        width: 300px;
+    }
+    .right-div {
+        width: 300px;
+    }
+    .left-div {
+        width: 300px;
+    }
 }
